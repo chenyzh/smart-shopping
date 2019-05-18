@@ -1,0 +1,86 @@
+[
+  {
+    "id": 0,
+    "productName": "fe金典生物牙膏",
+    "originalPrice": 14.8,
+    "nowPrice": 9.9
+  },
+  {
+    "id": 1,
+    "productName": "珍爱湿巾80片/包",
+    "originalPrice": 15.9,
+    "nowPrice": 10.9
+  },
+  {
+    "id": 2,
+    "productName": "好一典倍柔抽取式面巾纸8连包/提	",
+    "originalPrice": 18.9,
+    "nowPrice": 13.5
+  },
+  {
+    "id": 3,
+    "productName": "雕牌全效加浓洗洁精1.5kg/桶	",
+    "originalPrice": 20.9,
+    "nowPrice": 11.9
+  },
+  {
+    "id": 4,
+    "productName": "立白生姜洗洁精1kg/瓶	",
+    "originalPrice": 17,
+    "nowPrice": 8.9
+  },
+  {
+    "id": 5,
+    "productName": "阿道夫人参系列500kg",
+    "originalPrice": 79,
+    "nowPrice": 39.5
+  },
+  {
+    "id": 6,
+    "productName": "溜溜清梅160g/袋",
+    "originalPrice": 11.9,
+    "nowPrice": 9.9
+  },
+  {
+    "id": 7,
+    "productName": "Monster能量型维生素饮料330ml/罐",
+    "originalPrice": 6.5,
+    "nowPrice": 5.2
+  },
+  {
+    "id": 8,
+    "productName": "特价火龙果/500g",
+    "originalPrice": 8.8,
+    "nowPrice": 6.8
+  },
+  {
+    "id": 9,
+    "productName": "醇熟切片面包/袋",
+    "originalPrice": 7.8,
+    "nowPrice": 6.5
+  },
+  {
+    "id": 10,
+    "productName": "特价小台芒/500g",
+    "originalPrice": 10.9,
+    "nowPrice": 8.8
+  },
+  {
+    "id": 11,
+    "productName": "金河奶啤300ml",
+    "originalPrice": 6,
+    "nowPrice": 3.9
+  },
+  {
+    "id": 12,
+    "productName": "康师傅柠檬味冰红茶310ml*6",
+    "originalPrice": 12.5,
+    "nowPrice": 9.9
+  },
+  {
+    "id": 13,
+    "productName": "思念南瓜饼200g",
+    "originalPrice": 4.1,
+    "nowPrice": 2.5
+  }
+]
