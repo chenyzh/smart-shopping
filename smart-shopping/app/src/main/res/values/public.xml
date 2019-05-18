@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <public type="drawable" name="laoganma" id="0x7f020000"/>
+  <public type="drawable" name="laoganma" id="0x7f0800012"/>
+  <public type="drawable" name="jianjiao" id="0x7f0800013"/>
+  <public type="drawable" name="leshi" id="0x7f0800014"/>
+  <public type="drawable" name="babaozhou" id="0x7f0800015"/>
 </resources>
