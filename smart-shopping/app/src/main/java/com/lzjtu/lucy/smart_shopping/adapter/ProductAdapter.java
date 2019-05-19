@@ -1,5 +1,7 @@
 package com.lzjtu.lucy.smart_shopping.adapter;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -15,12 +17,14 @@ import com.lzjtu.lucy.smart_shopping.listener.OnItemClickListener;
 import com.lzjtu.lucy.smart_shopping.model.Product;
 import java.util.List;
 
-public class ProductAdapter extends BaseAdapter<Product>{
+public class ProductAdapter extends BaseAdapter<Product, ProductAdapter.ViewHolder>{
 
   private OnItemClickListener listener;
+  Context context;
 
-  public ProductAdapter(List data) {
+  public ProductAdapter(Context context,List data) {
     super(data);
+    this.context = context;
   }
 
   public void setOnItemClicklistener(OnItemClickListener listener){
@@ -34,11 +38,12 @@ public class ProductAdapter extends BaseAdapter<Product>{
   }
 
   @Override
-  public void bindHolder(RecyclerView.ViewHolder holder, int i) {
-    ((ViewHolder)holder).title.setText(data.get(i).productName);
-    ((ViewHolder)holder).originalPrice.setText("原价:"+data.get(i).originalPrice);
-    ((ViewHolder)holder).originalPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
-    ((ViewHolder)holder).nowPrice.setText("现价:"+data.get(i).nowPrice);
+  public void bindHolder(ViewHolder holder, int i) {
+//    holder.image.setImageDrawable(context.getResources().getDrawable(R.drawable.arrow));
+    holder.title.setText(data.get(i).productName);
+    holder.originalPrice.setText("原价:"+data.get(i).originalPrice);
+    holder.originalPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+    holder.nowPrice.setText("现价:"+data.get(i).nowPrice);
     holder.itemView.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {

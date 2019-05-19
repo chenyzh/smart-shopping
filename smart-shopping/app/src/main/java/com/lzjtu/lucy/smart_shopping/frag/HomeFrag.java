@@ -19,6 +19,9 @@ import com.lzjtu.lucy.smart_shopping.manager.ProductManager;
 import com.lzjtu.lucy.smart_shopping.model.Product;
 import java.util.ArrayList;
 import java.util.List;
+import com.lzjtu.lucy.smart_shopping.adapter.ProductAdapter;
+import com.lzjtu.lucy.smart_shopping.listener.OnItemClickListener;
+import com.lzjtu.lucy.smart_shopping.manager.ProductManager;
 
 public class HomeFrag extends BaseFrag {
 
@@ -37,7 +40,7 @@ public class HomeFrag extends BaseFrag {
   @Override
   public void initData() {
     ProductManager.getInstance().getProducts(getContext(), products -> {
-      adapter = new ProductAdapter(products);
+      adapter = new ProductAdapter(getContext(),products);
       adapter.setOnItemClicklistener(new OnItemClickListener() {
         @Override
         public void onItemClick(View view, int position) {
@@ -50,7 +53,5 @@ public class HomeFrag extends BaseFrag {
       recyclerView
           .addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
     });
-
-
   }
 }
