@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BaseAdapter<T> extends RecyclerView.Adapter {
+public abstract class BaseAdapter<T,V extends ViewHolder> extends RecyclerView.Adapter {
 
   List<T> data = null;
 
@@ -20,13 +20,13 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter {
 
   @NonNull
   @Override
-  public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+  public V onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
     return createHolder(viewGroup,i);
   }
 
   @Override
   public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-    bindHolder(viewHolder,i);
+    bindHolder((V) viewHolder,i);
   }
 
   @Override
@@ -34,8 +34,8 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter {
     return data.size();
   }
 
-  public abstract ViewHolder createHolder(ViewGroup viewGroup,int i);
+  public abstract V createHolder(ViewGroup viewGroup,int i);
 
-  public abstract void bindHolder(ViewHolder holder,int i);
+  public abstract void bindHolder(V holder,int i);
 
 }
