@@ -37,9 +37,10 @@ public class ProductAdapter extends BaseAdapter<Product, ProductAdapter.ViewHold
     return new ViewHolder(view);
   }
 
+  @SuppressLint("ResourceType")
   @Override
   public void bindHolder(ViewHolder holder, int i) {
-//    holder.image.setImageDrawable(context.getResources().getDrawable(R.drawable.arrow));
+    holder.image.setImageResource(R.drawable.laoganma);
     holder.title.setText(data.get(i).productName);
     holder.originalPrice.setText("原价:"+data.get(i).originalPrice);
     holder.originalPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);

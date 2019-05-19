@@ -1,4 +1,0 @@
-#Tue Apr 23 09:44:11 CST 2019
-base.0=/Users/chenyanzhang/cyz/as_demo/smart-shopping/speechDemo/build/intermediates/dex/debug/mergeDexDebug/out
-path.0=classes.dex
-renamed.0=classes.dex

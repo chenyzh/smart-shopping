@@ -19,7 +19,6 @@ import android.view.ViewParent;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.iflytek.voicedemo.IatDemo;
 import com.lzjtu.lucy.smart_shopping.R;
 import com.lzjtu.lucy.smart_shopping.adapter.ProductAdapter;
 import com.lzjtu.lucy.smart_shopping.adapter.pager.ViewPagerAdapter;
@@ -50,7 +49,7 @@ public class MainAct extends BaseAct {
       @Override
       public void onClick(View v) {
         Toast.makeText(MainAct.this, "带完善", Toast.LENGTH_SHORT).show();
-        intent = new Intent(MainAct.this, IatDemo.class);
+//        intent = new Intent(MainAct.this, IatDemo.class);
       }
     });
     viewPager = findViewById(R.id.main_content);
