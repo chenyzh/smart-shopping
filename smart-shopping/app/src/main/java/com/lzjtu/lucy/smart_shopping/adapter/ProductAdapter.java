@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.lzjtu.lucy.smart_shopping.R;
 import com.lzjtu.lucy.smart_shopping.listener.OnItemClickListener;
+import com.lzjtu.lucy.smart_shopping.manager.ProductManager;
 import com.lzjtu.lucy.smart_shopping.model.Product;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class ProductAdapter extends BaseAdapter<Product, ProductAdapter.ViewHold
   @SuppressLint("ResourceType")
   @Override
   public void bindHolder(ViewHolder holder, int i) {
-    holder.image.setImageResource(R.drawable.laoganma);
+    holder.image.setImageResource(ProductManager.getImageId(data.get(i).id));
     holder.title.setText(data.get(i).productName);
     holder.originalPrice.setText("原价:"+data.get(i).originalPrice);
     holder.originalPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);

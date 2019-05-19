@@ -6,4 +6,8 @@
   <color name="title_blue">#1296db</color>
   <color name="white">#ffffff</color>
   <color name="pressed_bg">#18000000</color>
+  <color name="normal_dark_gray">#8a8a8a</color>
+  <color name="light_gray">#ccc</color>
+  <color name="dark_gray">#aaa</color>
+  <color name="deep_dark_gray">#333</color>
 </resources>

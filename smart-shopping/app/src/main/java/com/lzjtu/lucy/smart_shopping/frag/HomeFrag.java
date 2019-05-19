@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 import com.lzjtu.lucy.smart_shopping.R;
 import com.lzjtu.lucy.smart_shopping.act.MainAct;
+import com.lzjtu.lucy.smart_shopping.act.ProductDetailAct;
 import com.lzjtu.lucy.smart_shopping.adapter.ProductAdapter;
 import com.lzjtu.lucy.smart_shopping.dao.DatabaseHelper;
 import com.lzjtu.lucy.smart_shopping.listener.OnItemClickListener;
@@ -46,6 +47,7 @@ public class HomeFrag extends BaseFrag {
         public void onItemClick(View view, int position) {
           Toast.makeText(getContext(), products.get(position).productName, Toast.LENGTH_LONG)
               .show();
+          ProductDetailAct.Start(getActivity(),products.get(position).id);
         }
       });
       recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
