@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.lzjtu.lucy.smart_shopping.R;
 import com.lzjtu.lucy.smart_shopping.act.MainAct;
 import com.lzjtu.lucy.smart_shopping.act.ProductDetailAct;
@@ -31,6 +32,8 @@ public class HomeFrag extends BaseFrag {
 
   private RecyclerView recyclerView;
 
+  private FirebaseAnalytics mFirebaseAnalytics;
+
   @Override
   public View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     View view = inflater.inflate(R.layout.frag_home, container, false);
@@ -40,6 +43,7 @@ public class HomeFrag extends BaseFrag {
 
   @Override
   public void initData() {
+    mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
     ProductManager.getInstance().getProducts(getContext(), products -> {
       adapter = new ProductAdapter(getContext(),products);
       adapter.setOnItemClicklistener(new OnItemClickListener() {
@@ -48,6 +52,10 @@ public class HomeFrag extends BaseFrag {
           Toast.makeText(getContext(), products.get(position).productName, Toast.LENGTH_LONG)
               .show();
           ProductDetailAct.Start(getActivity(),products.get(position).id);
+          Bundle bundle =  new Bundle();
+          bundle.putString(FirebaseAnalytics.Param.ITEM_ID, products.get(position).id+"");
+          bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, products.get(position).productName);
+//          mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
         }
       });
       recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

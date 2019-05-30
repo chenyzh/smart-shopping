@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <com.facebook.drawee.view.DraweeView
+    android:id="@+id/product_img"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:scaleType="fitCenter"
+    android:src="@drawable/image_default"
+    android:layout_margin="10dp"
+    />
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="title"
+    android:layout_alignTop="@+id/product_img"
+    android:layout_toRightOf="@id/product_img"
+    android:textSize="24sp"
+    />
+  <TextView
+    android:id="@+id/price"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:layout_alignBottom="@id/product_img"
+    android:layout_toRightOf="@id/product_img"
+    android:hint="price"
+    />
+  <Button
+    android:id="@+id/remove"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/payment_btn_bg"
+    android:text="删除"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    android:layout_alignBottom="@+id/price"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="10dp"
+    />
+
+</RelativeLayout>

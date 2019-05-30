@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <include layout="@layout/commen_header"/>
+
+  <EditText
+    android:id="@+id/speech_result"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:lines="3"
+    android:background="@color/white"
+    android:textColor="@color/dark_gray"
+    android:hint="听写结果"
+    android:gravity="left|top"
+    />
+  <Button
+    android:id="@+id/start_speech"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="开始"
+    android:textColor="@color/white"
+    android:background="@color/title_blue"
+    android:textSize="28sp"
+    android:layout_marginTop="20dp"
+    />
+  <Button
+    android:id="@+id/search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="搜索"
+    android:textColor="@color/white"
+    android:background="@color/title_blue"
+    android:textSize="28sp"
+    android:layout_marginTop="20dp"
+    />
+
+</LinearLayout>

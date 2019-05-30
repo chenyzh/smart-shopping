@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "983434561661",
+    "firebase_url": "https://super-app-8d4d7.firebaseio.com",
+    "project_id": "super-app-8d4d7",
+    "storage_bucket": "super-app-8d4d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983434561661:android:8cc9252b324089ca",
+        "android_client_info": {
+          "package_name": "com.lzjtu.lucy.smart_shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983434561661-9sa83blml7sqd47mrd4mg130854pbhv6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5N0lod02-EkTY1Vu30l5_NUPvl9xdijQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983434561661-9sa83blml7sqd47mrd4mg130854pbhv6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -48,6 +48,16 @@
     <activity android:name=".act.MainAct"/>
     <activity android:name=".act.LoginAct"/>
     <activity android:name=".act.ProductDetailAct"/>
+    <activity android:name=".act.ShopCarAct"/>
+    <activity android:name=".act.SpeechAct"/>
+    <activity android:name=".act.SearchAct"/>
+    <activity android:name=".act.PaymentAct"/>
+    <meta-data
+      android:name="IFLYTEK_APPKEY"
+      android:value="'5cb54c5f'" />
+    <meta-data
+      android:name="IFLYTEK_CHANNEL"
+      android:value="Android_Demo" />
   </application>
 
 </manifest>

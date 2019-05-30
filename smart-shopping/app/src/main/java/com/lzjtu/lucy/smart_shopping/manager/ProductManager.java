@@ -65,6 +65,26 @@ public class ProductManager {
         .subscribe(action);
   }
 
+  public void getProducts(Context context,String keyword,Action1<List<Product>> action){
+    Observable.create(new OnSubscribe<List<Product>>() {
+      @Override
+      public void call(Subscriber<? super List<Product>> subscriber) {
+        if (products.isEmpty()){
+          queryProducts(context);
+        }
+        List<Product> ps = new ArrayList<>();
+        for (Product p:products) {
+          if (p.productName.contains(keyword)){
+            ps.add(p);
+          }
+        }
+        subscriber.onNext(ps);
+      }
+    }).subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(action);
+  }
+
   private void queryProducts(Context context){
     dbHelper = new DatabaseHelper(context.getApplicationContext());
     products = new ArrayList<>();

@@ -8,8 +8,11 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.lzjtu.lucy.smart_shopping.R;
+import rx.subjects.BehaviorSubject;
 
 public abstract class BaseAct extends AppCompatActivity {
+
+  public BehaviorSubject shopCarBehavior = BehaviorSubject.create();
 
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {

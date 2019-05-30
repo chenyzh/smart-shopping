@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.facebook.drawee.generic.RoundingParams;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.lzjtu.lucy.smart_shopping.R;
+import com.lzjtu.lucy.smart_shopping.act.ShopCarAct;
 import com.lzjtu.lucy.smart_shopping.manager.SpManager;
 import com.lzjtu.lucy.smart_shopping.manager.SpManager.SpConsts;
 
@@ -22,6 +23,7 @@ public class MineFrag extends BaseFrag {
   TextView nameView;
   LinearLayout settingView;
   LinearLayout exitView;
+  LinearLayout shopCarView;
 
   AlertDialog.Builder dialogBuilder;
 
@@ -35,6 +37,13 @@ public class MineFrag extends BaseFrag {
     headerView.getHierarchy().setRoundingParams(params);
     nameView = view.findViewById(R.id.name);
     settingView = view.findViewById(R.id.setting);
+    shopCarView = view.findViewById(R.id.shop_car);
+    shopCarView.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        ShopCarAct.Start(getActivity());
+      }
+    });
     exitView = view.findViewById(R.id.exit);
     dialogBuilder = new AlertDialog.Builder(getContext());
     dialogBuilder.setMessage("确定退出？");
